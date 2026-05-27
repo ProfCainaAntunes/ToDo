@@ -48,8 +48,8 @@ public class TodoController : ControllerBase
                 Priority = createdItem.Priority
             };
 
-            return NoContent();
-            //return Created($"/tasks/{resultDto.Id}", resultDto);
+            //return NoContent();
+            return Created($"/tasks/{resultDto.Id}", resultDto);
         }
         catch (ArgumentException ex)
         {
@@ -74,8 +74,8 @@ public class TodoController : ControllerBase
             Priority = completedItem.Priority
         };
 
-        return NoContent();
-        //return Ok(resultDto);
+        //return NoContent();
+        return Ok(resultDto);
     }
 
     [HttpDelete("{id:guid}")]
