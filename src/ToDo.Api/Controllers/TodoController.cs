@@ -48,7 +48,8 @@ public class TodoController : ControllerBase
                 Priority = createdItem.Priority
             };
 
-            return Created($"/tasks/{resultDto.Id}", resultDto);
+            return NoContent();
+            //return Created($"/tasks/{resultDto.Id}", resultDto);
         }
         catch (ArgumentException ex)
         {
