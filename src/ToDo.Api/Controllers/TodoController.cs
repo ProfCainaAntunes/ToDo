@@ -74,7 +74,8 @@ public class TodoController : ControllerBase
             Priority = completedItem.Priority
         };
 
-        return Ok(resultDto);
+        return NoContent();
+        //return Ok(resultDto);
     }
 
     [HttpDelete("{id:guid}")]
