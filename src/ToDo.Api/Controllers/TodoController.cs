@@ -47,8 +47,9 @@ public class TodoController : ControllerBase
                 IsCompleted = createdItem.IsCompleted,
                 Priority = createdItem.Priority
             };
-
-            return Created($"/tasks/{resultDto.Id}", resultDto);
+            
+            return NoContent();
+            //return Created($"/tasks/{resultDto.Id}", resultDto);
         }
         catch (ArgumentException ex)
         {
